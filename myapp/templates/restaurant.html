@@ -1,0 +1,711 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>GourmetReserve</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/favicon.png' %} " rel="icon">
+
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %} " rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %} " rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-cente">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+            <h1 class="logo me-auto me-lg-0"><a href="">GourmetReserve</a></h1>
+       
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">Sobre </a></li>
+                    <li><a class="nav-link scrollto" href="#menu">Cardápio</a></li>
+                    <li><a class="nav-link scrollto" href="#events">Eventos</a></li>
+                    <li><a class="nav-link scrollto" href="#chefs">Chefes</a></li>
+                    <li><a class="nav-link scrollto" href="#gallery">Galeria</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+            <a href="{% url 'formulario_view' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Reserve uma mesa</a>
+
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Bem vindo ao <span>GourmetReserve</span></h1>
+                    <h2>Oferecendo experiências gastronômicas excepcionais há mais de 18 anos</h2>
+
+                    <div class="btns">
+                        <a href="#menu" class="btn-menu animated fadeInUp scrollto">Nosso Cardápio</a>
+                        <a href="{% url 'formulario_view' %}" class="btn-book animated fadeInUp scrollto">Reserve uma mesa</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="about-img">
+                            <img src="{% static 'assets/img/about.jpg' %}" alt="Descrição da imagem">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                        <h3>No GourmetReserve, nos dedicamos a proporcionar experiências gastronômicas inesquecíveis.
+                            Com mais de 18 anos de história, nosso restaurante é sinônimo de qualidade, sofisticação e
+                            sabor.</h3>
+                        <p class="fst-italic">
+                            Aqui cada prato é uma obra de arte e cada visita é um momento especial para nossos clientes.
+
+
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> Facilidade de Reserva - Com nosso sistema de reservas
+                                online, você pode garantir sua mesa com praticidade.</li>
+                            <li><i class="bi bi-check-circle"></i> Qualidade e Sabor Excepcionais - No GourmetReserve,
+                                utilizamos apenas ingredientes frescos e de alta qualidade para garantir que cada prato
+                                seja uma experiência culinária inesquecível.
+                            </li>
+                            <li><i class="bi bi-check-circle"></i> Ambiente Sofisticado e Acolhedor - Nosso restaurante
+                                oferece um ambiente elegante e convidativo, perfeito para qualquer ocasião, desde
+                                jantares românticos até celebrações em família.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+        <!-- ======= Menu Section ======= -->
+        <section id="menu" class="menu section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Cardápio</h2>
+                    <p>Conheça nosso Cardápio</p>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="menu-flters">
+                            <li data-filter="*" class="filter-active">Tudo</li>
+                            <li data-filter=".filter-starters">Entradas</li>
+                            <li data-filter=".filter-salads">Saladas</li>
+                            <li data-filter=".filter-specialty">Especialidades</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="col-lg-6 menu-item filter-starters">
+                        <img src="{% static 'assets/img/menu/lobster-bisque.jpg' %}" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Sopa de Lagosta</a><span>R$ 105,00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Uma sopa cremosa de lagosta
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="{% static 'assets/img/menu/bread-barrel.jpg' %}" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Pão de Alho</a><span>R$ 40,00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Pão fresco de alho, assado e coberto com queijo derretido
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-starters">
+                        <img src="{% static 'assets/img/menu/cake.jpg' %}" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Bolo de Caranguejo</a><span>R$ 85,00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Um delicado bolo de caranguejo servido em um pão tostado com alface e molho tártaro
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-salads">
+                        <img src="{% static 'assets/img/menu/caesar.jpg' %}" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Salada Caesar</a><span>R$ 60,00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Uma seleção clássica de salada Caesar com alface romana, croutons e queijo parmesão
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="{% static 'assets/img/menu/tuscan-grilled.jpg' %}" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Frango Grelhado à Toscana</a><span>R$ 100,00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Peito de frango grelhado com queijo provolone, corações de alcachofra e pesto vermelho
+                            assado
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-starters">
+                        <img src="{% static 'assets/img/menu/mozzarella.jpg' %}" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Palitos de Mozzarella</a><span>R$ 60,00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Palitos de queijo mozzarella empanados e fritos, servidos com molho marinara
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-salads">
+                        <img src="{% static 'assets/img/menu/greek-salad.jpg' %}" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Salada Grega</a><span>R$ 60,00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Espinafre fresco, alface crocante, tomates e azeitonas gregas, regados com molho de
+                            vinagrete
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-salads">
+                        <img src="{% static 'assets/img/menu/spinach-salad.jpg' %}" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Salada de Espinafre</a><span>R$ 90,00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Espinafre fresco com cogumelos, ovo cozido e vinagrete de bacon quente
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="{% static 'assets/img/menu/lobster-roll.jpg' %}" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Lagosta no Pão</a><span>R$ 120,00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Carne suculenta de lagosta, maionese e alface crocante em um pão tostado
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Menu Section -->
+
+
+
+        <!-- ======= Events Section ======= -->
+        <section id="events" class="events">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Eventos</h2>
+                    <p>Organize Seus Eventos em Nosso Restaurante</p>
+                </div>
+
+                <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="row event-item">
+                                <div class="col-lg-6">
+                                    <img src="{% static 'assets/img/event-birthday.jpg' %}" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                                    <h3>Festas de Aniversário</h3>
+                                    <div class="price">
+                                        <p><span>R$ 800,00</span></p>
+                                    </div>
+                                    <p class="fst-italic">
+                                    Transforme seu aniversário em uma celebração memorável no GourmetReserve. Nossa equipe dedicada está pronta para tornar o seu dia especial com um toque de classe e atenção aos detalhes.
+                                    </p>
+                                    <ul>
+                                        <li><i class="bi bi-check-circled"></i>Oferecemos diversos pacotes de aniversário, projetados para atender a diferentes preferências e orçamentos. De coquetéis elegantes a jantares completos, cada pacote inclui opções de decoração, música ao vivo ou DJ, e menus personalizados.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="row event-item">
+                                <div class="col-lg-6">
+                                    <img src="{% static 'assets/img/event-private.jpg' %}" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                                    <h3>Festas Privadas</h3>
+                                    <div class="price">
+                                        <p><span>R$ 1000,00</span></p>
+                                    </div>
+                                    <p class="fst-italic">Nosso salão de eventos, decorado com requinte e bom gosto, é o cenário perfeito para reunir amigos, familiares ou colegas em uma comemoração inesquecível. Com capacidade para 50 de convidados, o espaço pode ser personalizado de acordo com suas necessidades e preferências.
+                                    </p>
+                                    <ul>
+                                        <li><i class="bi bi-check-circled"></i>Faça da sua próxima festa privada uma celebração digna de lembranças inesquecíveis no GourmetReserve. Entre em contato conosco para agendar uma visita e conhecer nosso espaço. Nossa equipe de eventos está à disposição para ajudar a planejar cada detalhe da sua festa.
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="row event-item">
+                                <div class="col-lg-6">
+                                    <img src="{% static 'assets/img/event-custom.jpg' %}" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                                    <h3>Reuniões Sociais</h3>
+                                    <div class="price">
+                                        <p><span>R$ 100,00</span></p>
+                                    </div>
+                                    <p class="fst-italic">
+                                        De encontros de clubes a celebrações familiares, nosso restaurante oferece um ambiente acolhedor e sofisticado para qualquer reunião social. Nosso espaço é perfeito para reuniões de grupos, encontros de redes sociais, ou celebrações de qualquer tipo. Criamos um ambiente íntimo e elegante que garante uma experiência memorável para todos os presentes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section><!-- End Events Section -->
+
+        <!-- ======= Book A Table Section ======= -->
+<!-- myapp/templates/restaurant.html -->
+
+
+
+
+
+
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Depoimentos</h2>
+                    <p>Comentários dos Nossos Clientes</p>
+                </div>
+
+                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                   "Meu aniversário no GourmetReserve foi simplesmente inesquecível! O ambiente é sofisticado, a comida é divina e o atendimento é impecável. Meus amigos e familiares ficaram encantados com a experiência. Recomendo a todos!"
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                                <h3>Saul Goodman</h3>
+                                <h4>Advogado</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    "Organizamos uma reunião corporativa no GourmetReserve e foi um sucesso absoluto. O espaço é elegante, a equipe é extremamente profissional e o menu personalizado agradou a todos os nossos convidados. Certamente voltaremos para mais eventos."
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                                <h3>Sara</h3>
+                                <h4>Designer</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    "Fizemos um jantar de gala no GourmetReserve e foi espetacular. Cada detalhe, desde a decoração até a apresentação dos pratos, foi cuidadosamente pensado. A atmosfera é única e o serviço é de primeira classe. Parabéns à equipe!"
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                                <h3>Mariana S.</h3>
+                                <h4>Médica</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    "Minha esposa e eu decidimos celebrar nosso aniversário de casamento no GourmetReserve. A experiência foi maravilhosa, com uma atenção especial da equipe e uma refeição que superou nossas expectativas. Foi uma noite mágica!"
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                                <h3>Roberto</h3>
+                                <h4>Engenheiro de Software</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    "Realizamos uma festa de aniversário surpresa para um amigo no GourmetReserve e foi incrível! O ambiente luxuoso, a comida deliciosa e o serviço impecável tornaram a noite memorável. Recomendo a todos que buscam uma experiência única."
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                                <h3>Thiago</h3>
+                                <h4>Empresário</h4>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section><!-- End Testimonials Section -->
+
+        <!-- ======= Gallery Section ======= -->
+        <section id="gallery" class="gallery">
+
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Galeria</h2>
+                    <p>Algumas fotos do Nosso Restaurante</p>
+                </div>
+            </div>
+
+            <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row g-0">
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{% static 'assets/img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{% static 'assets/img/gallery/gallery-2.jpg' %}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{% static 'assets/img/gallery/gallery-3.jpg' %}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{% static 'assets/img/gallery/gallery-4.jpg'%}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{% static 'assets/img/gallery/gallery-5.jpg'%}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{% static 'assets/img/gallery/gallery-6.jpg' %}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{% static 'assets/img/gallery/gallery-7.jpg' %}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox"
+                                data-gall="gallery-item">
+                                <img src="{% static 'assets/img/gallery/gallery-8.jpg'%}" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Gallery Section -->
+
+        <!-- ======= Chefs Section ======= -->
+        <section id="chefs" class="chefs">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Chefes</h2>
+                    <p>Nossos Chefes Profissionais</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                            <img src="{% static 'assets/img/chefs/chefs-1.jpg'%}" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Walter White</h4>
+                                    <span>Chefe da Cozinha</span>
+                                </div>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                            <img src="{% static 'assets/img/chefs/chefs-2.jpg' %}" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Paola Carosella</h4>
+                                    <span>Confeiteira</span>
+                                </div>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                            <img src="{% static 'assets/img/chefs/chefs-3.jpg'%}" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>William Anderson</h4>
+                                    <span>Cozinheiro</span>
+                                </div>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Chefs Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Contato</h2>
+                    <p>Fale Conosco</p>
+                </div>
+            </div>
+
+            <div data-aos="fade-up">
+                <iframe style="border:0; width: 100%; height: 350px;"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-43.222692!3d-22.9867784!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd55cab1d3449%3A0x12226d0e8a769b1c!2sJANEIRO+RESTAURANTE!5e0!3m2!1spt-BR!2sbr!4v1621690792898!5m2!1spt-BR!2sbr"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+
+            <div class="container" data-aos="fade-up">
+
+                <div class="row mt-5">
+
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Localização:</h4>
+                                <p> Av. Delfim Moreira, 696 - Leblon, Rio de Janeiro - RJ, 22431-001</p>
+                            </div>
+
+                            <div class="open-hours">
+                                <i class="bi bi-clock"></i>
+                                <h4>Horário de funcionamento:</h4>
+                                <p>
+                                    Terça a Domingo<br>
+                                    11:00 - 23:00
+                                </p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>GourmetReserve@gmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Telefone:</h4>
+                                <p>(21) 2172-1001</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                  
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>GourmetReserve</h3>
+                            <p>
+                                Av. Delfim Moreira, 696 - Leblon, Rio de Janeiro - RJ, 22431-001<br><br>
+                                <strong>Telefone:</strong> (21) 2172-1001<br>
+                                <strong>Email:</strong> GourmetReserve@gmail.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Links úteis</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'login' %}">Administração</a></li>
+
+                        </ul>
+                    </div>
+
+                  
+
+                    
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>GourmetReserve</span></strong>. Todos os Direitos Reservados
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+                Feito por <a href="https://bootstrapmade.com/">Rafael Tomiazi</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
