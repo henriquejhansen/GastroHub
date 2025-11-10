@@ -1,6 +1,6 @@
 # 🍽️ GastroHub – Restaurant Table Reservation System
 
-GastroHub is a restaurant table reservation system developed in **Python** using the **Django** framework. This project was created to provide an efficient and functional solution for managing reservations in dining establishments.
+**GastroHub** is a restaurant table reservation system developed in **Python** using the **Django** framework. This project was created to provide an efficient and functional solution for managing reservations in dining establishments.
 
 ---
 
@@ -16,8 +16,8 @@ GastroHub is a restaurant table reservation system developed in **Python** using
 
 ## ✨ Features
 
-- User authentication system using Django's built-in tools.
-- Customer registration and login functionality.
+- User authentication system using Django's built-in tools
+- Customer registration and login functionality
 - Full CRUD operations for reservation data:
   - Reservation date
   - Reservation time
@@ -29,33 +29,28 @@ GastroHub is a restaurant table reservation system developed in **Python** using
 
 Follow the steps below to run the project on your machine:
 
-Install dependencies (requires Python and pip):
+1. Install dependencies (requires Python and pip):
 
 ```bash
 pip install -r requirements.txt
-```
-
 Apply database migrations:
 
-```bash
+bash
 python manage.py migrate
-```
-
 Start the development server:
 
-```bash
+bash
 python manage.py runserver
-```
+Access the system at: http://localhost:8000
 
-Access the system at: [http://localhost:8000](http://localhost:8000)
+🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
----
+📄 License
+This project is licensed under the MIT License – see the LICENSE file for details.
 
-## 💬 Want to leave feedback?
+👨‍💻 Author
+Developed by Henrique Hansen as part of Django and web development studies.
 
-Feel free to reach out via GitHub:  
-🔗 [https://github.com/henriquejhansen](https://github.com/henriquejhansen)
-
----
-
-Let me know if you'd like to add screenshots, deployment instructions, or a section about contributing. I can help you expand this further!
+💬 Feedback
+Feel free to reach out via GitHub: 🔗 https://github.com/henriquejhansen
